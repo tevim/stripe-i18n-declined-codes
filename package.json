@@ -1,5 +1,5 @@
 {
-  "name": "stripe-declined-codes",
+  "name": "stripe-i18n-declined-codes",
   "version": "1.0.0",
   "description": "translation files for stripe.com errors in JavaScript",
   "main": "./lib/index.js",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tevim/stripe-declined-codes.git"
+    "url": "git+https://github.com/tevim/stripe-i18n-declined-codes.git"
   },
   "keywords": [
     "stripe",
@@ -31,9 +31,9 @@
   "author": "Hannes Maack",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tevim/stripe-declined-codes/issues"
+    "url": "https://github.com/tevim/stripe-i18n-declined-codes/issues"
   },
-  "homepage": "https://github.com/tevim/stripe-declined-codes#readme",
+  "homepage": "https://github.com/tevim/stripe-i18n-declined-codes#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.1",

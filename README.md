@@ -1,18 +1,18 @@
-# stripe-declined-codes
+# stripe-i18n-declined-codes
 This npm package contains translations for all stripe.com declined codes that the user can fix. Checkout the stripe readme @ https://stripe.com/docs/declines/codes and the wiki @ https://github.com/stripe/stripe-node/wiki/Error-Handling
 
 ## Installation
 Install the package with:
 
 ```bash
-$ yarn add stripe-declined-codes
+$ yarn add stripe-i18n-declined-codes
 ```
 
 ## Usage Example
 
 ```js
 import Stripe from 'stripe'
-import { EN_TRANSLATIONS } from 'stripe-declined-codes'
+import { EN_TRANSLATIONS } from 'stripe-i18n-declined-codes'
 
 const stripe = new Stripe(STRIPE_SECRET_KEY)
 stripe.charges.create({
@@ -21,10 +21,10 @@ stripe.charges.create({
 }).then(
   function (result) {},
   function (err) {
-    // StripeCardError is the only kind of exception that the user can fix, let's throw everything else
-    if(err.type !== 'StripeCardError') throw err
-
-    return { error: EN_TRANSLATIONS[err.code] || ' ... generic payment error occured' }
+    if(err.type === 'StripeCardError') {
+      return EN_TRANSLATIONS[err.code] || ' ... generic payment error occured'
+    }
+    // ...
   }
 )
 ```
@@ -33,10 +33,10 @@ stripe.charges.create({
 This package supports the following languages as exports:
 
 ```js
-import { DE_TRANSLATIONS } from 'stripe-declined-codes'
-import { EN_TRANSLATIONS } from 'stripe-declined-codes'
-import { ES_TRANSLATIONS } from 'stripe-declined-codes'
-import { FR_TRANSLATIONS } from 'stripe-declined-codes'
+import { DE_TRANSLATIONS } from 'stripe-i18n-declined-codes'
+import { EN_TRANSLATIONS } from 'stripe-i18n-declined-codes'
+import { ES_TRANSLATIONS } from 'stripe-i18n-declined-codes'
+import { FR_TRANSLATIONS } from 'stripe-i18n-declined-codes'
 ```
 
 ## Development
