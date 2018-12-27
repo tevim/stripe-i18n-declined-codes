@@ -1,18 +1,18 @@
-# stripe-i18n
-This npm package contains translations for all stripe.com declines codes that the user can fix. Checkout the stripe readme @ https://stripe.com/docs/declines/codes and the wiki @ https://github.com/stripe/stripe-node/wiki/Error-Handling
+# stripe-declined-codes
+This npm package contains translations for all stripe.com declined codes that the user can fix. Checkout the stripe readme @ https://stripe.com/docs/declines/codes and the wiki @ https://github.com/stripe/stripe-node/wiki/Error-Handling
 
 ## Installation
 Install the package with:
 
 ```bash
-$ yarn add stripe-i18n
+$ yarn add stripe-declined-codes
 ```
 
 ## Usage Example
 
 ```js
 import Stripe from 'stripe'
-import { EN_TRANSLATIONS } from 'stripe-i18n' # import your language
+import { EN_TRANSLATIONS } from 'stripe-declined-codes'
 
 stripe.charges.create({
   amount: 995,
@@ -32,10 +32,10 @@ stripe.charges.create({
 This package supports the following languages as exports:
 
 ```js
-import { DE_TRANSLATIONS } from 'stripe-i18n'
-import { EN_TRANSLATIONS } from 'stripe-i18n'
-import { ES_TRANSLATIONS } from 'stripe-i18n'
-import { FR_TRANSLATIONS } from 'stripe-i18n'
+import { DE_TRANSLATIONS } from 'stripe-declined-codes'
+import { EN_TRANSLATIONS } from 'stripe-declined-codes'
+import { ES_TRANSLATIONS } from 'stripe-declined-codes'
+import { FR_TRANSLATIONS } from 'stripe-declined-codes'
 ```
 
 ## Development

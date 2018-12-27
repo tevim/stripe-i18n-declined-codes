@@ -16,7 +16,7 @@ const STRIPE_ERRORS = [
   'rate_limit'
 ];
 
-describe('stripe-i18n', () => {
+describe('stripe-declined-codes', () => {
   it('contains DE translations', () => {
     expect(DE_TRANSLATIONS).include.all.keys(STRIPE_ERRORS);
   });
