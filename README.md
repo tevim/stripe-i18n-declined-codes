@@ -14,6 +14,7 @@ $ yarn add stripe-declined-codes
 import Stripe from 'stripe'
 import { EN_TRANSLATIONS } from 'stripe-declined-codes'
 
+const stripe = new Stripe(STRIPE_SECRET_KEY)
 stripe.charges.create({
   amount: 995,
   // ...
